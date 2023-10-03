@@ -268,14 +268,14 @@ const ai = (() => {
         let isSpotChosen = false;
         const computerWinningSpot = _checkOpenSpotsForWins(Occupier.Computer);
         const playerWinningSpot = _checkOpenSpotsForWins(Occupier.Player);
-        const willMakeDumbChoice = _willMakeDumbChoice();
+        //const willMakeDumbChoice = _willMakeDumbChoice();
 
-        if (computerWinningSpot >= 0 && !isSpotChosen && !willMakeDumbChoice) {
+        if (computerWinningSpot >= 0 && !isSpotChosen) {
             _fillSpace(computerWinningSpot);
             isSpotChosen = true;
         }
 
-        if (playerWinningSpot >= 0 && !isSpotChosen && !willMakeDumbChoice) {
+        if (playerWinningSpot >= 0 && !isSpotChosen) {
             _fillSpace(playerWinningSpot);
             isSpotChosen = true;
         }
