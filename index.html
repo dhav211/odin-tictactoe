@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Odin TicTacToe</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer type="module" src="tictactoe_ui.js"></script>
+    <script defer type="module" src="tictactoe.js"></script>
+  </head>
+  <body>
+    <div id="victory-card">
+      <p>Add this text in the script</p>
+      <button id="reset-button">Play Again?</button>
+    </div>
+    <h1>Tic-Tac-Toe Time, BABY!</h1>
+    <div id="game-board">
+      <button class="space" id="top-left">
+        <div class="space-inner"></div>
+      </button>
+      <button class="space" id="top">
+        <div class="space-inner"></div>
+      </button>
+      <button class="space" id="top-right">
+        <div class="space-inner"></div>
+      </button>
+      <button class="space" id="left">
+        <div class="space-inner"></div>
+      </button>
+      <button class="space" id="center">
+        <div class="space-inner"></div>
+      </button>
+      <button class="space" id="right">
+        <div class="space-inner"></div>
+      </button>
+      <button class="space" id="bottom-left">
+        <div class="space-inner"></div>
+      </button>
+      <button class="space" id="bottom">
+        <div class="space-inner"></div>
+      </button>
+      <button class="space" id="bottom-right">
+        <div class="space-inner"></div>
+      </button>
+    </div>
+    <div id="score-area">
+      <div class="player-area">
+        <p class="player-name">Player</p>
+        <p class="score" id="user-score">0</p>
+      </div>
+      <div class="player-area">
+        <p class="player-name">Computer</p>
+        <p class="score" id="computer-score">0</p>
+      </div>
+    </div>
+  </body>
+</html>
