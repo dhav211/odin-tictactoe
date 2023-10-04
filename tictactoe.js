@@ -272,6 +272,7 @@ const ai = (() => {
         if (lastChosenSpot < 0 && gameBoard.isSpaceOccupied(4)) {
             const corners = [0,2,6,8];
             _fillSpace(Math.floor(Math.random() * corners.length));
+            isSpotChosen = true;
         }
 
         if (computerWinningSpot >= 0 && !isSpotChosen) {
