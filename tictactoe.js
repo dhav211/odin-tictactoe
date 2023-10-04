@@ -268,7 +268,11 @@ const ai = (() => {
         let isSpotChosen = false;
         const computerWinningSpot = _checkOpenSpotsForWins(Occupier.Computer);
         const playerWinningSpot = _checkOpenSpotsForWins(Occupier.Player);
-        //const willMakeDumbChoice = _willMakeDumbChoice();
+
+        if (lastChosenSpot < 0 && gameBoard.isSpaceOccupied(4)) {
+            const corners = [0,2,6,8];
+            _fillSpace(Math.floor(Math.random() * corners.length));
+        }
 
         if (computerWinningSpot >= 0 && !isSpotChosen) {
             _fillSpace(computerWinningSpot);
@@ -377,9 +381,3 @@ const positionConverter = (() => {
 // module.exports.gameBoard = gameBoard;
 // module.exports.positionConverter = positionConverter;
 // module.exports.Occupier = Occupier;
-
-// gameBoard.setNewBoard();
-// gameBoard.fillSpace(0, Occupier.Player);
-// gameBoard.fillSpace(4, Occupier.Player);
-// gameBoard.fillSpace(8, Occupier.Player);
-// console.log(gameBoard.isWin(Occupier.Player));
